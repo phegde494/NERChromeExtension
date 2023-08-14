@@ -1,6 +1,6 @@
 // content.js
 
-function sendTextToPython(text) {
+function sendTextToPython(text, node) {
   fetch('http://localhost:5001/send-text', {
     method: 'POST',
     headers: {
@@ -11,8 +11,8 @@ function sendTextToPython(text) {
   .then(response => response.json())
   .then(data => {
     console.log('Response from Python:', data);
-    alert("Data is: ", data);
-    applyHtmlToNode(data.htmlCode); // Apply HTML code to the node
+    alert(data.htmlCode);
+    applyHtmlToNode(node, data.htmlCode); // Apply HTML code to the node
   })
   .catch(error => {
     alert("ERROR: ", error);

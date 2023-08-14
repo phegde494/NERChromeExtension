@@ -1,19 +1,23 @@
 # app.py
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 
 def process_text(text):
     # Process the received text and generate HTML code
-    # For demonstration, let's just wrap the text in a <strong> tag
     html_code = f'<strong>{text}</strong>'
+    print ("modified = " + html_code)
     return html_code
 
 @app.route('/send-text', methods=['POST'])
 def receive_text_content():
     data = request.json
     text = data.get('text')
+    print("text is: " + text)
     
     # Process the text and generate HTML code
     html_code = process_text(text)
@@ -22,4 +26,4 @@ def receive_text_content():
     return jsonify({"htmlCode": html_code})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='127.0.0.1', port=5001)
