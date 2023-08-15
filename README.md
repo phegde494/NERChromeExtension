@@ -12,7 +12,7 @@ A Chrome Extension which will highlight all "entities" on a webpage on click, ma
 
 ## To Run
 
-- You first need to set up the flask server. To do this, navigate to the servers directory, and run the following command: `python app.py`
+- You first need to start up the Flask server. To do this, navigate to the servers directory, and run the following command: `python app.py`
 - Next, go to [chrome://extensions/](chrome://extensions/) and activate developer mode
 - Click "load unpacked" and upload the main directory (NERChromeExtension)
 - Next, go to any website, navigate to the chrome extensions button at the top, and click on the NER Chrome Extension
