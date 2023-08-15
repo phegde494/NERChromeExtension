@@ -20,5 +20,6 @@ A Chrome Extension which will highlight all "entities" on a webpage on click, ma
 
 ## Demo
 
+https://github.com/phegde494/NERChromeExtension/assets/48624928/c4d9c3f1-2dce-4ef2-9f15-63373f445f4d
 
 
