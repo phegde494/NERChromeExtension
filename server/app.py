@@ -16,11 +16,10 @@ CORS(app)
 def receive_text_content():
     data = request.json
     text = data.get('text')
-    print("text is: " + text)
-    html_code = text
+
     # Process the text and generate HTML code
     html_code = pt.process_text(text)
-
+    
     # Respond with HTML code
     return jsonify({"htmlCode": html_code})
 
